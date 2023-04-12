@@ -1,5 +1,6 @@
 import React from 'react'
 import Container from '../Container';
+import Logo from './Logo';
 
 export default function Navbar() {
   return (
@@ -7,7 +8,7 @@ export default function Navbar() {
         <div className="py-4 border-b-[1px]">
             <Container>
                 <div className="flex flex-row itemscenter justify-between gap-3 md:gap-0">
-                    
+                    <Logo />
                 </div>
             </Container>
         </div>
