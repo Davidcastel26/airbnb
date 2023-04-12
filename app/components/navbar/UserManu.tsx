@@ -20,6 +20,9 @@ const UserManu = () => {
                             hover:shadow-md transition"
             >
                 <AiOutlineMenu />  
+                <div className='hidden md:block'>
+
+                </div>
             </div>
         </div>
     </div>
