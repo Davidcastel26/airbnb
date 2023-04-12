@@ -1,6 +1,7 @@
 'use client';
 
 import { AiOutlineMenu } from 'react-icons/ai'
+import Avatar from '../Avatar';
 
 const UserManu = () => {
   return (
@@ -21,7 +22,7 @@ const UserManu = () => {
             >
                 <AiOutlineMenu />  
                 <div className='hidden md:block'>
-
+                     <Avatar />
                 </div>
             </div>
         </div>
