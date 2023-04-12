@@ -9,6 +9,7 @@ export default function Navbar() {
             <Container>
                 <div className="flex flex-row itemscenter justify-between gap-3 md:gap-0">
                     <Logo />
+                    
                 </div>
             </Container>
         </div>
