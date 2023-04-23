@@ -1,9 +1,43 @@
-import React from 'react'
+'use client';
+import { useCallback, useEffect, useState } from "react";
 
-export const Modal = () => {
+interface ModalProps {
+    isOpen?: boolean;
+    onClose: () => void;
+    onSubmit: () => void;
+    title?: string;
+    body?: React.ReactElement;
+    footer?: React.ReactElement;
+    actionLabel: string;
+    disable?: boolean;
+    secondaryAction?: () => void;
+    secondaryLabel?: string;
+}
+
+export const Modal: React.FC<ModalProps> = ({
+    isOpen, onClose, onSubmit,
+    title, body, footer, actionLabel,
+    disable, secondaryAction, secondaryLabel
+}) => {
+
+    const [showModal, setShowModal] = useState(isOpen)
+
+    useEffect(() => {
+        setShowModal(isOpen)
+    },[isOpen])
+
+    const handleClose = useCallback(() => {
+        if(disable) return
+
+        setShowModal(false)
+        setTimeout(()=>{
+            onClose()
+        },300)
+    },[disable, onClose])
+
   return (  
     <div>
-       a         
+               
     </div>
   ) 
 }
